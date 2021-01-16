@@ -9,7 +9,7 @@ let id = document.querySelector("#userName").value;
     fetch("https://reqres.in/api/users/"+id)
         .then(data => data.json())
         .then(user => {
-            console.log(user.data);
+            console.log(user.first_name);
             let nombre = document.createElement("h2");
             nombre.innerHTML = user.first_name+" "+user.last_name;
             div_user.appendChild(nombre);
